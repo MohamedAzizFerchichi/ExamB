@@ -1,0 +1,56 @@
+    //One to One relation uni-directional
+    //fleshe de personnel vers entite2
+    //relation ecrit dans personnel
+    //    @OneToOne
+    //    private Entite2 entite2;
+
+    //OneToOne relation bi-directional
+    //dans personnel
+    //    @OneToOne
+    //    private Entite2 entite2;
+    //dans entite2 ici l'entite2 est le class fille de personnel
+    //    @OneToOne(mappedBy = "entite2")
+    //    private Entite1 personnel;
+
+    //OnetoMany relation uni-directional
+    //dans personnel 1 ---> * Entite2
+    //    @OneToMany(cascade = CascadeType.ALL)
+    //    private List<Entite2> entite2s;
+
+    //ManytoOne relation uni-directional
+    //dans personnel * ---> 1 Entite2
+    //    @ManyToOne(cascade = CascadeType.ALL)
+    //    private Entite2 entite2;
+
+
+    //ManytoMany relation uni-directional
+    //dans personnel * ---> * Entite2
+    //    @ManyToMany(cascade = CascadeType.ALL)
+    //    private List<Entite2> entite2s;
+
+
+
+    //ManytoMany relation bi-directional
+    personnel * ---- * Entite2
+    //dans  personnel
+    //    @ManyToMany(cascade = CascadeType.ALL)
+    //    private List<Entite2> entite2s;
+    //dans entite2
+    //    @ManyToMany(mappedBy = "entite2s")
+    //    private List<Entite1> entite1s;
+
+    //ManytoOne relation bi-directional
+    //personnel * --- 1 Entite2
+    //dans personnel
+    //    @ManyToOne(cascade = CascadeType.ALL)
+    //    private Entite2 entite2;
+    //dans entite2
+    //    @OneToMany(mappedBy = "entite2")
+    //    private List<Entite1> entite1s;
+
+
+    //Pour planifier un déclenchement de méthode à une date fixe, nous pouvons
+    utiliser le paramètre fixedRate dans l'annotation @Scheduled.
+
+    //Pour fixer un délai fixe entre la dernière exécution et le début de l'exécution
+      suivante, nous pouvons utiliser le paramètre fixedDelay.
